@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열</title>
+</head>
+<body>
+    <h1>배열(Array)</h1>
+    <pre>
+        let 배열1 = [];
+        let 배열2 = [1,2,3];
+        let 배열3 = ['1',2,null];
+        let 배열4 = new Array;
+        let 배열5 = '안녕하세요';
+
+
+
+    </pre>
+
+
+
+    <script>
+        window.onload = function(){
+            let 배열1 = []; // 선언
+            
+            let 배열2 = [1,2,3]; // 선언, 초기화
+            배열2.push('대한민국',5,6); // 배열 마지막 순차적으로 삽입
+            배열2.shift(); // 배열 앞에서 삭제
+            
+            let 배열3 = ['1',2,null]; // 선언, 초기화
+            배열3.pop(); // 배열 마지막에 삭제
+            배열3.unshift(null,0); // 배열 앞에 순차적으로 삽입
+            
+            let 배열4 = new Array; // 선언
+            let 배열5 = '안녕하세요'; // 초기화
+            
+            console.log(`배열1 = ${typeof 배열1}`);
+            console.log(`배열2 = ${typeof 배열2}`);
+            console.log(`배열3 = ${typeof 배열3}`);
+            console.log(`배열4 = ${typeof 배열4}`);
+            console.log(`배열5 = ${typeof 배열5}`);
+            
+            console.log(배열1);
+            console.log(배열2);
+            console.log(배열3);
+            console.log(배열4);
+            console.log(배열5);
+
+            let idx=0;
+            while(idx<배열2.length){
+                console.log(`배열2[${idx}]=${배열2[idx]}`);
+                idx++;
+            }
+
+            for(let idx=0;idx<배열3.length;idx++){
+                console.log(`배열3[${idx}]=${배열3[idx]}`);
+            }
+
+            
+            for(let idx=0;idx<배열5.length;idx++){
+                console.log(`배열5[${idx}]=${배열5[idx]}`);
+            }
+
+            console.log(`배열2 = ${배열2}`);
+            console.log(`배열3 = ${배열3}`);
+
+            for(let idx=0;idx<배열1.length;idx++){
+                console.log(`배열1[${idx}] = ${배열1[idx]}`); // 배열1의 값자체가 없기 때문에 실행이 안됨
+            }
+
+            for(let idx=0;idx<배열2.length;idx++){
+                console.log(`배열2[${idx}] = ${배열2[idx]}`); 
+            }
+
+            for(let idx=0;idx<배열3.length;idx++){
+                console.log(`배열3[${idx}] = ${배열3[idx]}`); 
+            }
+
+            for(let idx=0;idx<배열4.length;idx++){
+                console.log(`배열4[${idx}] = ${배열4[idx]}`); // 배열4의 값이 없어서 실행이 안됨
+            }
+
+            for(let idx=0;idx<배열5.length;idx++){
+                console.log(`배열5[${idx}] = ${배열5[idx]}`); 
+            }
+
+            배열1.push(11,22,33,44,55,66);
+            배열4.unshift(11,22,33,44,55,66);
+            console.log(배열1);
+            console.log(배열4);
+            배열1.pop();
+            배열4.shift();
+            console.log(배열1);
+            console.log(배열4);
+            console.log('=============');
+            console.log(`배열1 = ${배열1}`);
+            console.log(`배열2 = ${배열2}`);
+            console.log(`배열3 = ${배열3}`);
+            console.log(`배열4 = ${배열4}`);
+            console.log(`배열5 = ${배열5}`);
+
+            let delIdx = 배열1.indexOf(55);
+            console.log(delIdx);
+            배열1.splice(delIdx,1);
+            console.log(`배열1 = ${배열1}`);
+        
+            let a = 5;
+            let b = a;
+            if(a==b){
+                console.log(`둘은 같다`);
+            }else{
+                console.log(`둘은 같지 않다`);
+            }
+
+            // forEach 라는 메서드, 함수값만 가질 수 있고 탈출하지 못하고 처음부터 끝까지 무조건 1번은 돈다
+            배열1.forEach(function(idx){
+                console.log(idx)
+            });
+        }
+    </script>
+</body>
+</html>

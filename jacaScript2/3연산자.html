@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연산자</title>
+</head>
+<body>
+    <h1>연산자</h1>
+    <h2>산술연산자</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>종류</th>
+                <th>기본형</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>+</td>
+                <td>A+B</td>
+                <td>더하기</td>
+            </tr>
+            <tr>
+                <td>-</td>
+                <td>A-B</td>
+                <td>빼기</td>
+            </tr>
+            <tr>
+                <td>*</td>
+                <td>A*B</td>
+                <td>곱하기</td>
+            </tr>
+            <tr>
+                <td>/</td>
+                <td>A/B</td>
+                <td>나누기</td>
+            </tr>
+            <tr>
+                <td>%</td>
+                <td>A%B</td>
+                <td>나머지</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>문자열 결합연산자</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>종류</th>
+                <th>기본형</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>+</td>
+                <td>A+B</td>
+                <td>둘중 한개라도 문자열 결합연산자</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>대입산술연산자</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>종류</th>
+                <th>기본형</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>+=</td>
+                <td>A+=B</td>
+                <td>A = A + B</td>
+            </tr>
+            <tr>
+                <td>-=</td>
+                <td>A-=B</td>
+                <td>A = A - B</td>
+            </tr>
+            <tr>
+                <td>*=</td>
+                <td>A*=B</td>
+                <td>A = A * B</td>
+            </tr>
+            <tr>
+                <td>/=</td>
+                <td>A/=B</td>
+                <td>A = A / B</td>
+            </tr>
+            <tr>
+                <td>%=</td>
+                <td>A%=B</td>
+                <td>A = A % B</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>증감연산자</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>종류</th>
+                <th>기본형</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>++</td>
+                <td>++A</td>
+                <td>A = A + 1 or A += 1</td>
+            </tr>
+            <tr>
+                <td>++</td>
+                <td>A++</td>
+                <td>A = A + 1 or A += 1</td>
+            </tr>
+            <tr>
+                <td>--</td>
+                <td>--A</td>
+                <td>A = A - 1 or A -= 1</td>
+            </tr>
+            <tr>
+                <td>--</td>
+                <td>A--</td>
+                <td>A = A - 1 or A -= 1</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>비교연산자</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>종류</th>
+                <th>기본형</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>&gt;</td>
+                <td>A&gt;B</td>
+                <td>A가 B보다 크다(초과)</td>
+            </tr>
+            <tr>
+                <td>&lt;</td>
+                <td>A&lt;B</td>
+                <td>A가 B보다 작다(미만)</td>
+            </tr>
+            <tr>
+                <td>&gt;=</td>
+                <td>A&gt;=B</td>
+                <td>A가 B보다 크거나 같다(이상)</td>
+            </tr>
+            <tr>
+                <td>&lt;=</td>
+                <td>A&lt;=B</td>
+                <td>A가 B보다 작거나 같다(이하)</td>
+            </tr>
+            <tr>
+                <td>==</td>
+                <td>A==B</td>
+                <td>A는 B와 같다 (자료의 형태를 초월한다, 즉 자료형태의 일치여부를 따지지 않는다)</td>
+            </tr>
+            <tr>
+                <td>!=</td>
+                <td>A!=B</td>
+                <td>A는 B와 같지 않다 (자료의 형태를 초월한다, 즉 자료형태의 일치여부를 따지지 않는다)</td>
+            </tr>
+            <tr>
+                <td>===</td>
+                <td>A===B</td>
+                <td>A는 B와 같다 (자료의 형태를 따진다, 즉 자료형태의 일치여부를 따진다)</td>
+            </tr>
+            <tr>
+                <td>!==</td>
+                <td>A!==B</td>
+                <td>A는 B와 같지 않다 (자료의 형태를 따진다, 즉 자료형태의 일치여부를 따진다)</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>논리연산자</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>종류</th>
+                <th>기본형</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>&&</td>
+                <td>조건1 && 조건2</td>
+                <td>조건1과 조건2가 모두 true => true반환</td>
+            </tr>
+            <tr>
+                <td>||</td>
+                <td>조건1 || 조건2</td>
+                <td>조건1과 조건2중 하나라도 true => true반환</td>
+            </tr>
+            <tr>
+                <td>!</td>
+                <td>!(조건식)</td>
+                <td>true => false, false => true</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>삼항연산자(if를 못쓰는 경우나 간단한 조건문에 요긴하게 사용)</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>종류</th>
+                <th>기본형</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>조건 ? true : false</td>
+                <td>a>b ? true : false</td>
+                <td>조건식이 참이라면 true영역 실행, 거짓이라면 false영역 실행</td>
+            </tr>
+            
+        </tbody>
+    </table>
+    
+
+
+    <script>
+        // 결합연산자
+        let a = '5';
+        let b = '살';
+        console.log('a+b = ' + (a + b));
+
+        let c = 5;
+        let d = '살';
+        console.log('c+d = ' + (c + d));
+        
+        let e = 5;
+        let f = Number('5');
+        console.log('e+f = ' + (e + f));
+    
+
+        // 대입산술연산자
+        let aa = 10;
+        let bb = 5;
+        console.log('aa+=5',aa+=5); // 'aa에다가 5를 더한후에 aa에 대입하시오' 란 의미
+        console.log('aa+=5',aa);
+        console.log('bb*=4',bb*=4);
+       
+        
+        // 증감연산자(++,--) , 증감하는 시점이 다르다 A++는 이후부터, ++A 증가 후 적용
+        let aaa = 10;
+        let bbb = 20;
+        console.log('aaa = ', + aaa);
+        console.log('aaa = ', + aaa++);
+        console.log('aaa = ', + aaa);
+        console.log('aaa = ', + --aaa);
+        console.log('aaa = ', + aaa);
+
+        console.log('bbb = ', + bbb);
+        console.log('bbb = ', + ++bbb);
+        console.log('bbb = ', + bbb);
+        console.log('bbb = ', + bbb--);
+        console.log('bbb = ', + bbb);
+
+        // 비교연산자
+        let aaaa = 10;
+        let bbbb = '10';
+        let cccc = (aaaa == bbbb);
+        let dddd = (aaaa === bbbb);
+        console.log('aaaa의 타입 = ' + typeof aaaa);
+        console.log('bbbb의 타입 = ' + typeof bbbb);
+        console.log('cccc = ', cccc);
+        console.log('dddd = ', dddd);
+
+        // 논리연산자
+        let x=5;
+        let y=7;
+        let z = (x>=4) && (y<=10);
+        console.log('z=' + z);
+        z = (x!=5) || (y!=4);
+        console.log(z);
+        z = !((x!=5) || (y!=4));
+        console.log(z);
+
+        // 삼항연산자
+        let xx=10;
+        let yy='10';
+        let zz=(xx===yy) ? 'xx와 yy는 자료와 데이터형식이 일치합니다' : 'xx와 yy는 자료나 형식이 일치하지 않습니다';
+        console.log('xx와 yy의 비교 결과는 = ' + zz);
+        
+    </script>
+</body>
+</html>
