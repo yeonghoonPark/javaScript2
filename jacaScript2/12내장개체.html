@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내장개체(object)</title>
+</head>
+<body>
+    <h1>내장개체</h1>
+    <h2>날짜/시간</h2>
+    <pre>
+        let today = new Date();
+        console.log(today);
+        console.log(Date());
+        console.log(`올해년도 = ${today.getFullYear()}`);
+        console.log(`이번달 = ${today.getMonth() + 1}`);
+        console.log(`오늘 = ${today.getDate()}`);
+        console.log(`현재 시 = ${today.getHours()}`);
+    </pre>
+
+    <h2>수학개체</h2>
+    <pre>
+        let pi = Math.PI;
+        let r = 5;
+        let width = Math.pow(r,2)*pi;
+        console.log(width); 
+        console.log(Math.abs(-5)); // 절대값
+        console.log(Math.max(-5,5,1,2,66,4,7)); // 최대값
+        console.log(Math.min(-5,5,1,2,66,4,7)); // 최소값
+        console.log(Math.round(447.2465,2)); // 반올림
+        console.log(Math.ceil(447.2465)); // 올림
+        console.log(Math.floor(447.2465)); // 내림
+        console.log(Math.sqrt(4)); // 루트
+        console.log(Math.pow(4, 3)); // 제곱
+        console.log(Math.random()); // 무작위
+        console.log(Math.PI); // 원주율
+    </pre>
+
+    <h2>문자열개체</h2>
+    <pre>
+        let 문자열1 = new String(); // 문자열2처럼 값을 넣지 문자열1의 경우처럼 많이 하지 않는다
+        문자열1 = '대한민국만세';
+        let 문자열2 = '대한민국만세';
+    </pre>
+
+    <h2>배열개체</h2>
+    <pre>
+        let 배열1 = new Array();
+        배열1[0] = '대';
+        배열1[1] = '한';
+        배열1[2] = '민';
+        배열1[3] = '국';
+        배열1[4] = '만';
+        배열1[5] = '세';
+        let 배열2 = ['대', '한', '민', '국', '만', '세'];
+    </pre>
+
+    <h2>오리지널 개체</h2>
+    <pre>
+        let 개체1 = new Object();
+        개체1={
+            번호:1,
+            이름:'홍길동',
+            나이:24,
+            지역:'서울',
+            함수:function(par1){
+                alert(par1);
+            }
+        }
+        let 개체2 = {
+            번호:2,
+            이름:'임옹령',
+            나이:69,
+            지역:'남원'
+        };
+
+        console.log(개체1.이름);
+        개체1.함수('이것은 메서드입니다.');
+    </pre>
+
+    
+
+
+
+    <script>
+        // 날짜개체
+        let today = new Date();
+        console.log(today);
+        console.log(Date());
+        console.log(`올해년도 = ${today.getFullYear()}`);
+        console.log(`이번달 = ${today.getMonth() + 1}`);
+        console.log(`오늘 = ${today.getDate()}`);
+        console.log(`현재 시 = ${today.getHours()}`);
+
+        today.setFullYear('2023');
+        today.setHours('10');
+        console.log(today);
+
+        let today1 = new Date('2020', '3', '6', '15', '52', '00');
+        console.log(today1);
+
+        let diffDate = today.getTime(); // 밀리초 1970년 1월 1일부터 경과 밀리초
+        diffDate = diffDate/1000/60/60/24; // 1970년 1월 1일부터 경과 일수
+        console.log(diffDate);
+
+        // 수학개체
+        let pi = Math.PI;
+        let r = 5;
+        let width = Math.pow(r,2)*pi;
+        console.log(width); 
+        console.log(Math.abs(-5)); // 절대값
+        console.log(Math.max(-5,5,1,2,66,4,7)); // 최대값
+        console.log(Math.min(-5,5,1,2,66,4,7)); // 최소값
+        console.log(Math.round(447.2465,2)); // 반올림
+        console.log(Math.ceil(447.2465)); // 올림
+        console.log(Math.floor(447.2465)); // 내림
+        console.log(Math.sqrt(4)); // 루트
+        console.log(Math.pow(4, 3)); // 제곱
+        console.log(Math.random()); // 무작위
+        console.log(Math.PI); // 원주율
+
+        // 문자열개체
+        let 문자열1 = new String(); // 문자열2처럼 값을 넣지 문자열1의 경우처럼 많이 하지 않는다
+        문자열1 = '대한민국만세';
+        let 문자열2 = '대한민국만세';
+
+        // 배열개체
+        let 배열1 = new Array();
+        배열1[0] = '대';
+        배열1[1] = '한';
+        배열1[2] = '민';
+        배열1[3] = '국';
+        배열1[4] = '만';
+        배열1[5] = '세';
+        let 배열2 = ['대', '한', '민', '국', '만', '세'];
+
+        // 오리지널 개체 (무엇이든 다 담을 수 있다, 숫자, 문자, 함수... 모든 것)
+        let 개체1 = new Object();
+            개체1={
+                번호:1,
+                이름:'홍길동',
+                나이:24,
+                지역:'서울',
+                함수:function(par1){
+                    alert(par1);
+                }
+            }
+        let 개체2 = {
+            번호:2,
+            이름:'임옹령',
+            나이:69,
+            지역:'남원'
+        };
+
+        console.log(개체1.이름);
+        개체1.함수('이것은 메서드입니다.');
+
+        // let 개체3={
+        //     [1,2,3,4,5,6,7,8,9,10],
+        //     [1,2,3,4,5,6,7,8,9,10],
+        //     [1,2,3,4,5,6,7,8,9,10]
+        // }
+        
+        let 배열 = [
+            {number:1, name:'홍길동', age:24},
+            {number:2, name:'성춘향', age:17},
+            {number:3, name:'월매', age:43},
+        ];
+        배열.forEach((ele, idx, arr)=>{
+            console.log(`배열[${idx}] = ${arr[idx].number}, ${arr[idx].name}, ${arr[idx].age}`);
+        });
+        
+    </script>
+</body>
+</html>

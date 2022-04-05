@@ -46,6 +46,28 @@
         console.log(`array2 = ${array2}`);
 
 
+        let array3 = [1,2,3,4,5];
+        let newArray = array3.forEach((값,인덱스,배열)=>{
+            console.log(`array3[${인덱스}] = ${값}`);
+            return 값; // forEach는 리턴 불가능
+        });
+        console.log(newArray); // 리턴값이 나오지 않음 undefined
+
+        let newArray2 = array3.map((값,인덱스,배열)=>{
+            return 값; // map는 리턴 가능
+        });
+        console.log(newArray2); // 리턴값이 나옴
+
+
+
+
+        // for of, return 불가능
+        let arr = ['사과', '배', '토마토', '수박', '참외'];
+        let txt = '';
+        for(let item of arr){ // for (아이템 of 배열)
+            txt += item + ', ';
+        }
+        console.log(txt);
     </script>
 </body>
 </html>
