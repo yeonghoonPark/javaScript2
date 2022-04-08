@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개체</title>
+</head>
+<body>
+    <h1>개체</h1>
+
+    <script>
+        // 개체 만드는 첫번째와 두번째의 방법, []는 배열 {}는 개체
+        // let myObj = new Object();
+        // let myObj = {}; 
+
+        // 개체에는 무엇이든 넣을 수 있다
+
+        let myObj = new Object();
+        myObj = {
+            number:1,  // key:저장된 값, key는 숫자로는 시작할 수 없다. 저장된 값 = property
+            name:'홍길동',
+            age:35,
+            addr:'한양',
+            myFn:(para)=>{
+                console.log(para);
+            },
+            subObj:{
+                number:1-1,
+                name:'홍자녀',
+                age:1,
+                addr:'한양',
+                myFn:(para)=>{
+                    console.log(para);
+                },
+            },
+
+        }
+        console.log(myObj.name);
+        myObj.myFn('메서드의 파라미터 값');
+        
+        console.log(myObj.subObj.name);
+        myObj.subObj.myFn('subObj의 myFn키의 프로퍼티는 함수이고 이것은 그 값이다');
+        
+        
+    </script>
+</body>
+</html>

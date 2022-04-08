@@ -10,12 +10,15 @@ h1{
 h1 a{
     color: darkred;
 }
+h1.night a{
+    filter: invert(100%);
+}
 ul{
     padding-left: 50px;
     font-size: 30px;
 }
 ul a{
-    color: darkblue;
+    color: #000;
 }
 div.content{
     margin: 0 50px;
@@ -34,12 +37,12 @@ button{
     position: fixed;
     left: 50%;
     top: 50%;
-    transform: translate(-120%, -50%);
+    transform: translate(-50%, -50%);
     padding: 16px 20px;
     font-size: 32px;
     opacity: 0.3;
     transition: 0.5s;
 }
-button:nth-child(2){
+/* button:nth-child(2){
     transform: translate(10%, -50%);
-}
+} */
