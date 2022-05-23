@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let names = [
+            "Steven Paul Jobs",
+            "Bill Gates",
+            "Mark Elliot Zuckerverg",
+            "Elon Musk",
+            "Jeff Bezos",
+            "Warren Edward Buffett",
+            "Larry Page",
+            "Larry Ellison",
+            "Tim Cook",
+            "Lloyd Blankfein"
+        ]
+
+        // for (let idx = 0; idx < names.length; idx++) {
+        //     console.log(names[idx]);
+        // }
+
+        // names.forEach((item, idx, arr) => {
+        //     console.log(item, idx);
+        // });
+
+        /* 반복 array함수(배열함수 메서드) */
+
+        // map, forEach와 다른 점은 값을 반환한다
+        let data = names.map((item, idx) => {
+            return (
+                item
+            )
+        })
+
+        // filter, 말 그대로 필터링 해준다. 어떠한 조건을 넣어서 그 값이 true인 부분만 반환 됨. 그 결과 값은 array로 나온다.
+        let data2 = names.filter((item) => {
+            return (
+                item.startsWith("L")
+            )
+        })
+
+        // find, 어떠한 조건을 넣었을 때 그에 맞는 값 하나만을 string으로 반환한다. 
+        let data3 = names.find((item) => {
+            return (
+                item.startsWith("L")
+            )
+        })
+
+        /* 
+         * filter과 find의 차이점 
+         * filter는 array형태로 그 조건에 속하는 모든 값을 다 반환한다.
+         * find는 string형태로 반환하고 그리고 여러 조건이 겹치더라도 첫번째 하나의 값만
+         * 반환하기 때문에, 이는 어떠한 조건을 주고 내가 찾고 싶은 하나의 값만을 찾을 수 있다.
+        */
+
+        // findIndex, 어떠한 조건을 주어서 배열에서 그에 맞는 idxNum을 찾아 반환한다.
+        let data4 = names.findIndex((item) => {
+            return (
+                item == "Larry Page"
+            )
+        })
+
+        // some, 어떠한 조건을 넣었을 때 그 결과 값을 true, false로 반환한다.
+        let data5 = names.some((item) => {
+            return (
+                item.startsWith("A")
+            )
+        })
+
+        // every, 어떠한 조건을 넣었을 때 그 조건에 모두가 true인지 false인지의 값을 반환한다.
+        let data6 = names.every((item) => {
+            return (
+                item.length > 0
+            )
+        })
+
+        console.log(data);
+        console.log(data2);
+        console.log(data3);
+        console.log(data4);
+        console.log(data5);
+        console.log(data6);
+    </script>
+</body>
+
+</html>
